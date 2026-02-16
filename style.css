@@ -18,20 +18,21 @@ body {
 p {
     font-size: 20px;
     font-weight: 300;
-    margin: 140px 0;
+    margin: 180px 0;
 }
 
-.red {
-    color: #ff0000;
+/* Spazi extra per frasi più isolate */
+.spaced {
+    margin: 260px 0;
 }
 
-.blue {
-    color: #4da6ff;
+.ultra-space {
+    margin: 350px 0;
 }
 
-.green {
-    color: #00ff3c;
-}
+.red { color: #ff0000; }
+.blue { color: #2f5bff; }
+.green { color: #00ff3c; }
 
 a {
     text-decoration: none;
@@ -42,6 +43,7 @@ a:hover {
     opacity: 0.6;
 }
 
+/* ENTER button */
 .enter {
     position: fixed;
     top: 30px;
@@ -49,8 +51,10 @@ a:hover {
     font-size: 16px;
     letter-spacing: 3px;
     color: #ff0000;
+    cursor: pointer;
 }
 
+/* DOOMING finale */
 .dooming-final {
     font-size: 90px;
     letter-spacing: 22px;
@@ -60,6 +64,7 @@ a:hover {
     margin-bottom: 250px;
 }
 
+/* Quote */
 .quote {
     font-style: italic;
     text-align: center;
@@ -67,18 +72,49 @@ a:hover {
     margin-bottom: 200px;
 }
 
+/* ===== MENU LATERALE ===== */
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background: #000;
+    border-left: 1px solid #222;
+    padding-top: 120px;
+    transition: 0.4s ease;
+}
+
+.side-menu a {
+    display: block;
+    padding: 20px 40px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Responsive */
+
 @media (max-width: 900px) {
-    .container {
-        width: 85%;
-    }
-
-    p {
-        font-size: 18px;
-        margin: 100px 0;
-    }
-
-    .dooming-final {
-        font-size: 55px;
-        letter-spacing: 12px;
-    }
+    .container { width: 85%; }
+    p { font-size: 18px; margin: 100px 0; }
+    .dooming-final { font-size: 55px; letter-spacing: 12px; }
 }
